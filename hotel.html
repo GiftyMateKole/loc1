@@ -165,8 +165,10 @@
       
 
       function initMap() {
-var lat=5.759389;
-var lang=-0.219439;
+	  navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 30000 });
+function onSuccess(position) {
+var lat=position.coords.latitude;
+var lang=position.coords.longitude;
 var pyrmont = new google.maps.LatLng(lat,lang);
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
@@ -192,9 +194,13 @@ var pyrmont = new google.maps.LatLng(lat,lang);
 
 
       }
+	  }
 	  
-	  
-	  
+	  function onError(error) {
+alert('code: ' + error.code + '\n' +
+'message: ' + error.message + '\n');
+}
+
      
 
 

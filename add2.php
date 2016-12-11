@@ -9,7 +9,7 @@ session_start();
 $name = $_GET['name'];
 $web = $_GET['web'];
 $num = $_GET['num'];
-$mem = $_GET['mem'];
+//$mem = $_GET['mem'];
 $in = $_GET['in'];
 $out = $_GET['out'];
 $room = $_GET['room'];

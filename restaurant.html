@@ -158,9 +158,10 @@
       
 
       function initMap() {
-	  
-var lat=5.759389;
-var lang=-0.219439;
+ navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 30000 });
+function onSuccess(position) {
+var lat=position.coords.latitude;
+var lang=position.coords.longitude;
 var pyrmont = new google.maps.LatLng(lat,lang);
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
@@ -186,7 +187,12 @@ var pyrmont = new google.maps.LatLng(lat,lang);
 
 
       }
-	 
+	  }
+	  
+	  function onError(error) {
+alert('code: ' + error.code + '\n' +
+'message: ' + error.message + '\n');
+}
 
      
 
@@ -347,61 +353,9 @@ var pyrmont = new google.maps.LatLng(lat,lang);
 	$.ajax(ajaxPageUrl,
 				{async:true,complete:regComplete}	
 				);
-alert(name);	
+alert("Table reserved");	
 
-		 var myContact = navigator.contacts.create(
- {
- "displayName":null,
- "name":{
- "givenName":name,
- "formatted":name,
- "middleName":null,
- "familyName":null,
- "honorificPrefix":null,
- "honorificSuffix":null
- },
- "nickname":null,
- "phoneNumbers":[
- {"type":"mobile","value":num,"id":0,"pref":false},
- {"type":"other","value":num,"id":1,"pref":false}
- ],
- "emails":[
- {"type":"home","value":null,"id":0,"pref":false}
- ],
- "addresses":[
- {
- "postalCode":null,
- "type":"work",
- "id":0,
- "locality":address,
- "pref":"false",
- "streetAddress":" ",
- "region":" ",
- "country":" "
- }],
- "ims":null,
- "organizations":[
- {
- "name":" ",
- "title":" ",
- "type":null,
- "pref":"false",
- "department":" "
- }],
- "birthday":null,
- "note":"My Notes",
- "categories":null,
- "urls":[
- {
- "type":"other",
- "value":web,
- "id":0,
- "pref":false
- }]
- }
- );
- myContact.save();
- alert("The contact, " + myContact.name.givenName + ", has been created");
+		 
  });
 
 

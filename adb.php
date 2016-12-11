@@ -2,7 +2,7 @@
 /**
 *Database connection helper
 */
-include_once("http://52.89.116.249/~gifty.mate-kole/loc1/setting.php");
+include_once("../loc1/setting.php");
 /**
 * Database connection helper class
 */

@@ -31,7 +31,7 @@
 		$email=$_REQUEST['email'];
 		
 		
-		include_once("http://52.89.116.249/~gifty.mate-kole/loc1/func.php");
+		include_once("../loc1/func.php");
 		$obj=new func();
 		
 		if($obj->reg($name,$pword,$email,$phone,$org)){
@@ -40,8 +40,8 @@
 			echo "User not added";
 		}
 		
-		$sender = "Locate";
-		$msg = "$name you successfully registered for the find app";
+		$sender = "Identify";
+		$msg = "$name you successfully registered for the Identify app";
 		$user = "mobileapp";
 		$pwd = "foobar";
 		$smsc = "smscMTN";

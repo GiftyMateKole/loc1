@@ -1,5 +1,5 @@
 <?php
-include_once("http://52.89.116.249/~gifty.mate-kole/loc1/adb.php");
+include ("../loc1/adb.php");
 
 class func extends adb{
 	function func(){
@@ -50,6 +50,8 @@ class func extends adb{
 		return $this->query($strQuery);
 	}
 }
+$obj = new func();
+$obj->getreq(60);
 
 	
 ?>

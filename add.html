@@ -1,7 +1,7 @@
 <!DOCTYPE html >
   <head>
     
-    <title>Google Maps JavaScript API Example: Map Simple</title>
+    <title></title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmkOsyqpV0uDdAT0BzWkEgdTbfsRQZq8k"
             type="text/javascript"></script>
     <script type="text/javascript">
@@ -9,9 +9,10 @@
     var infowindow;
 
     function initialize() {
-      
-var lat=5.759389;
-var lang=-0.219439;
+ navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 30000 });
+function onSuccess(position) {
+var lat=position.coords.latitude;
+var lang=position.coords.longitude;
 var pyrmont = new google.maps.LatLng(lat,lang);
       var options = {
         zoom: 15,
@@ -40,7 +41,12 @@ var pyrmont = new google.maps.LatLng(lat,lang);
         });
     });
     }
+	}
 	
+	 function onError(error) {
+alert('code: ' + error.code + '\n' +
+'message: ' + error.message + '\n');
+}
 	
 	
 
@@ -82,17 +88,7 @@ var pyrmont = new google.maps.LatLng(lat,lang);
 
   <body style="margin:0px; padding:0px;" onload="initialize()">
   
-  	<nav class="navbar navbar-default" >
-  <div class="container-fluid" style="background-color:pink">
-   
-    <ul class="nav navbar-nav" >
-      <li><a href="#admin">Home</a></li>
-      <li ><a href="/loc/places/add.html">Add a place</a></li>
-      <li><a href="#bk" onclick="showbk(2);">Rooms</a></li>
-      <li><a href="#atm" onclick="showatm(1);">ATM </a></li>
-    </ul>
-  </div>
-</nav>
+  	<a href="admin.html">Back</a>
   
     <div id="map" style="width: 500px; height: 800px"></div>
     <div id="message"></div>

@@ -5,7 +5,7 @@
 		exit();
 	}
 	
-include_once "http://52.89.116.249/~gifty.mate-kole/loc1/func.php";
+include_once "../loc1/func.php";
 	$id=$_SESSION['user']['ID'];
     $obj= new func();
     $result=$obj->getres($id);

@@ -9,12 +9,11 @@ session_start();
 <html >
 	<head>
 		<meta charset="utf-8">
-		<title>Ashesi University College</title>
+		<title>Identify</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 		<link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.theme.css" />
 		
@@ -31,33 +30,6 @@ session_start();
 				var mobile_system = '';
 			}
 		</script>
-		<style>
-			.ui-selectmenu.ui-popup .ui-input-search {
-				margin-left: .5em;
-				margin-right: .5em;
-			}
-			.ui-selectmenu.ui-dialog .ui-content {
-				padding-top: 0;
-			}
-			.ui-selectmenu.ui-dialog .ui-selectmenu-list {
-				margin-top: 0;
-			}
-			.ui-selectmenu.ui-popup .ui-selectmenu-list li.ui-first-child .ui-btn {
-				border-top-width: 1px;
-				-webkit-border-radius: 0;
-				border-radius: 0;
-			}
-			.ui-selectmenu.ui-dialog .ui-header {
-				border-bottom-width: 1px;
-			}
-			.ui-page .ui-header {
-			font-family:Comic Sans MS, cursive, sans-serif;
-			background: #742f37;
-			}
-			a {
-				text-decoration: none;
-			}
-		</style>
 
 		<script src="js/lib/jquery.js"></script>
 		<!-- your scripts here -->
@@ -87,7 +59,7 @@ session_start();
 
 function showRes(str) {
     if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("txtH").innerHTML = "";
         return;
     } else {
         
@@ -105,7 +77,7 @@ function showRes(str) {
 
 function showRoom(str) {
     if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("txtHi").innerHTML = "";
         return;
     } else {
         
@@ -131,13 +103,14 @@ function showRoom(str) {
 
 			<div  data-role="header" style="text-shadow: none" >
 				<h1 style= "font-size: 18px">Identify</h1>
+				<a href="index.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+				<a href="index.html">Logout</a>
 			</div>
 			<div data-role="content" style="text-shadow: none">
-			
 			Find:
 			 <select name="sel">
+			 <option value="lodging">Hotels</option>
   <option value="restaurant">Restaurant</option>
-   <option value="lodging">Hotels</option>
   <option value="atm">ATM</option>
  
   
@@ -159,7 +132,7 @@ function showRoom(str) {
 	<div data-role="page" id="req" >
 
 			<div  data-role="header" style="text-shadow: none"  class="jumbotron text-center" >
-				<h1 style= "font-size: 18px"></h1>
+				<h1 style= "font-size: 18px">Ashesi University <br/> College</h1>
 				<a href="index1.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back to home page</a>
 			</div>
 			<div data-role="content" style="text-shadow: none">
@@ -171,7 +144,7 @@ function showRoom(str) {
 	<div data-role="page" id="book" >
 
 			<div  data-role="header" style="text-shadow: none"  class="jumbotron text-center" >
-				<h1 style= "font-size: 18px"></h1>
+				<h1 style= "font-size: 18px">Ashesi University <br/> College</h1>
 				<a href="index1.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back to home page</a>
 			</div>
 			<div data-role="content" style="text-shadow: none">
@@ -183,7 +156,7 @@ function showRoom(str) {
 	<div data-role="page" id="hotel" >
 
 			<div  data-role="header" style="text-shadow: none"  class="jumbotron text-center" >
-				<h1 style= "font-size: 18px"></h1>
+				<h1 style= "font-size: 18px">Ashesi University <br/> College</h1>
 				<a href="index1.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back to home page</a>
 			</div>
 			<div data-role="content" style="text-shadow: none">

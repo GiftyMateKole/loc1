@@ -1,0 +1,87 @@
+<?php
+session_start();
+	if(!isset($_SESSION['user']['ID'])){
+		header("Location: index.html");
+		exit();
+	}
+?>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ashesi University College</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+		
+
+		<script>
+			var userAgent = navigator.userAgent + '';
+			if (userAgent.indexOf('iPhone') > -1) {
+				document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+				var mobile_system = 'iphone';
+			} else if (userAgent.indexOf('Android') > -1) {
+				document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+				var mobile_system = 'android';
+			} else {
+				var mobile_system = '';
+			}
+		</script>
+
+		<script src="js/lib/jquery.js"></script>
+		<!-- your scripts here -->
+		<script src="js/app/app.js"></script>
+		<script src="js/app/bootstrap.js"></script>
+		<script src="js/lib/jquery.mobile.js"></script>
+		<style>
+			
+			.ui-page .ui-header {
+			font-family:Comic Sans MS, cursive, sans-serif;
+			background: #742f37;
+			}
+			a {
+				text-decoration: none;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-1.12.1.js"></script>
+		<script type="text/javascript">
+		
+</script>
+	</head>
+	<body>
+	<div data-role="page" id="login" >
+
+			<div  data-role="header" style="text-shadow: none"  >
+				<h1 style= "font-size: 18px">Identify</h1>
+				<a href="index.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+				
+			</div>
+			<div data-role="content" style="text-shadow: none">
+			
+			<h3 style-="color:#742f37"><center> Login</center> </h3>
+			
+			<!-- <form action="admin.html" method="post"> -->
+			Email:
+			<input type="email" id="email" name="email"></input>
+			Password:
+			<input type="password" id="pword" name="pword" ></input>
+			</br>
+			<a href="admin.html"><button class="btn red darken-4">Login</button></a>
+			<!-- </form> -->
+			
+			</div>
+	</div>
+	
+	
+	
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+			<script type="text/javascript" src="cordova.js"></script>
+			<script type="text/javascript" src="scripts/platformOverrides.js"></script>
+			<script type="text/javascript" src="scripts/index.js"></script>
+			</body>
+			</html>

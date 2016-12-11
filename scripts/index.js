@@ -13,8 +13,7 @@
 		}
 		
 		else if(find=="lodging"){
-			window.location.href="hotel.html";
-		
+			window.location.href="hotel.html"
 		}
 }
 
@@ -37,7 +36,7 @@ function reg(){
 	$.ajax(ajaxPageUrl,
 				{async:true,complete:regComplete}	
 				);	
-	alert("Registered");
+	alert("Successfully registered");
 }
 
 function logComplete(xhr,status){
@@ -68,6 +67,41 @@ function admin(str) {
 		
 }
 
+function showatm(str) {
+    if (str == "") {
+        document.getElementById("card").innerHTML = "";
+        return;
+    } else {
+        
+            xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("card").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","http://52.89.116.249/~gifty.mate-kole/loc1/getatm.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+
+function showbk(str) {
+    if (str == "") {
+        document.getElementById("room").innerHTML = "";
+        return;
+    } else {
+        
+            xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("room").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","http://52.89.116.249/~gifty.mate-kole/loc1/getbk.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
 
 
 			
