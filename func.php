@@ -25,6 +25,11 @@ class func extends adb{
 		return $this->query($strQuery);
 	}
 	
+	function getUsers(){
+		$strQuery="select * from reg";
+		return $this->query($strQuery);
+	}
+	
 	function getres($id){
 		$strQuery="select * from book where member='$id'";
 		return $this->query($strQuery);
@@ -50,8 +55,7 @@ class func extends adb{
 		return $this->query($strQuery);
 	}
 }
-$obj = new func();
-$obj->getreq(60);
+
 
 	
 ?>

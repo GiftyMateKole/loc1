@@ -103,6 +103,45 @@ function showbk(str) {
     }
 }
 
+$('#user').click(function () {
+	var str="2";
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        
+            xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","http://52.89.116.249/~gifty.mate-kole/loc1/getUsers.php?q="+str,true);
+        xmlhttp.send();
+    }
+});
+
+$('#atm').click(function () {
+	var str="2";
+    if (str == "") {
+        document.getElementById("card").innerHTML = "";
+        return;
+    } else {
+        
+            xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("card").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","http://52.89.116.249/~gifty.mate-kole/loc1/getatm.php?q="+str,true);
+        xmlhttp.send();
+    }
+});
+
+
 
 			
 

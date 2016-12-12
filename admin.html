@@ -80,8 +80,7 @@ session_start();
 			<ul>
 			<li><a href="#admin">Home</a></li>
 			<li><a href="" onclick="admin(2)">Add a place</a></li>
-			<li><a href="#bk" >Rooms</a></li>
-			<li><a href="#atm" onclick="showatm(8)" >ATM</a></li>
+			<li id="user"><a href="#user" >Users</a></li>
 			</ul>
 			</div>
 			<a href="index.html">Logout</a>
@@ -101,8 +100,7 @@ session_start();
 			<ul>
 			<li><a href="#admin">Home</a></li>
 			<li><a href="" onclick="admin(2)">Add a place</a></li>
-			<li><a href="#bk" >Rooms</a></li>
-			<li><a href="#atm" onclick="showatm(8)" >ATM</a></li>
+			<li id="user"><a href="#user"  >Users</a>
 			</ul>
 			</div>
 			<a href="index.html">Logout</a>
@@ -123,8 +121,7 @@ session_start();
 			<ul>
 			<li><a href="#admin">Home</a></li>
 			<li><a href="" onclick="admin(2)">Add a place</a></li>
-			<li><a href="#bk" >Rooms</a></li>
-			<li><a href="#atm" onclick="showatm(8)" >ATM</a></li>
+			<li id="user"><a href="#user" >Users</a>
 			</ul>
 			</div>
 			<a href="index.html">Logout</a>
@@ -134,6 +131,26 @@ session_start();
 			<div data-role="content" style="text-shadow: none" >
 			<div id="card" class="well"><b></b></div>
 				
+			</div><!-- /content -->
+		</div>
+		
+		<div data-role="page" id="user" style="background: white">
+
+			<div data-role="header" style="text-shadow: none">
+				<h1>Identify</h1>
+			<div data-role="navbar">
+			<ul>
+			<li><a href="#admin">Home</a></li>
+			<li><a href="" onclick="admin(2)">Add a place</a></li>
+			<li id="user"><a href="#user">Users</a></li>
+			</ul>
+			</div>
+			<a href="index.html">Logout</a>
+			</div><!-- /header -->
+			
+			
+			<div data-role="content" style="text-shadow: none" >
+			<div id="txtHint" class="well"><b></b></div>
 			</div><!-- /content -->
 		</div>
 	
